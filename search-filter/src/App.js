@@ -4,26 +4,15 @@ import {useState, useEffect} from "react";
 import names from "./data/names.json";
 
 function App() {
-	const [namesList, setNamesList] = useState(names.names);
-	const [inputName, setInputName] = useState();
-
-	const inputHandler = (e) => {
-		setInputName(e.target.value);
-
-		let appearList = [...namesList];
-		appearList = appearList.filter((name) =>
-			name.toLowerCase().includes(inputName.toLowerCase())
-		);
-		console.log(appearList);
-		setNamesList(appearList);
-	};
+	const [inputName, setInputName] = useState("");
 
 	return (
 		<div className="wrapper">
-			<input type="text" onChange={inputHandler} value={inputName}></input>
+			<input type="text" onChange={(e) => setInputName(e.target.value)}></input>
 			<ul>
-				{namesList &&
-					namesList.map((name) => {
+				{names.names
+					.filter((name) => name.toLowerCase().includes(inputName.toLowerCase()))
+					.map((name) => {
 						return <li>{name}</li>;
 					})}
 			</ul>
