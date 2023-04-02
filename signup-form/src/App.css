@@ -1,0 +1,46 @@
+.wrapper {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: lightgreen;
+}
+
+.form {
+	background-color: #fff;
+	width: 30%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 25px;
+}
+
+input {
+	font-size: 20px;
+	padding: 20px 15px;
+	border: none;
+	background-color: rgb(231, 228, 228);
+}
+
+.btn-submit {
+	font-size: 20px !important;
+	padding: 15px 20px;
+	background-color: green;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	transition: 500ms ease;
+}
+.btn-submit:hover {
+	background-color: rgb(2, 107, 2);
+}
+
+.input-success {
+	border: 2px solid green;
+}
+
+.input-error {
+	border: 2px solid red;
+}
