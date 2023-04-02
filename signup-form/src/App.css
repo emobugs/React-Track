@@ -24,6 +24,10 @@ input {
 	background-color: rgb(231, 228, 228);
 }
 
+input:focus {
+	border: none;
+}
+
 .btn-submit {
 	font-size: 20px !important;
 	padding: 15px 20px;
@@ -37,10 +41,16 @@ input {
 	background-color: rgb(2, 107, 2);
 }
 
-.input-success {
+.input-success,
+.input-success:focus {
 	border: 2px solid green;
 }
 
-.input-error {
+.input-error,
+.input-error:focus {
 	border: 2px solid red;
+}
+
+span {
+	color: red;
 }

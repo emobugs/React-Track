@@ -96,7 +96,7 @@ function App() {
 					placeholder="Email"
 					onChange={emailHandler}
 				/>
-				{submitted && <span>{validateEmail}</span>}
+				{submitted && <span>{validateEmail(values.email)}</span>}
 				<button className="btn-submit" type="submit">
 					Register
 				</button>
